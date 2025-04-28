@@ -15,3 +15,13 @@ def char_counter(word_string):
         else:
             char_list[char] = 1
     return char_list
+
+def sort_on(dict):
+   return dict["num"]
+
+def chars_to_sorted_list(char_counts):
+    char_list = []
+    for char, count in char_counts.items():
+        char_list.append({"char": char, "num": count})
+    char_list.sort(reverse=True, key=sort_on)   
+    return char_list
